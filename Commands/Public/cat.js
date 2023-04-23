@@ -14,7 +14,7 @@ module.exports = async ({ Constants: { Colors } }, documents, msg, commandData) 
 			msg.send({
 				embed: {
 					color: Colors.LIGHT_GREEN,
-					title: `Here's your adorale cat picture! Meow! 🐱`,
+					title: `Here's your adorable cat picture! Meow! 🐱`,
 					image: {
 						url: cat,
 					},

@@ -36,8 +36,8 @@ module.exports = async ({ client, Constants: { Colors, Text }, configJS }, { ser
 			return msg.send({
 				embed: {
 					color: Colors.SOFT_ERR,
-					title: `I'm sorry, but I can't do that... 😔`,
-					description: `I'm missing permissions to ban that user!\nEither they are above me or I don't have the **Ban Members** permission.`,
+					title: `I'm sorry, but I cannot do that... 😔`,
+					description: `I'm missing permissions to ban that user!\nEither they are above me hierarchically or I don't have the **Ban Members** permission.`,
 				},
 			});
 		}
@@ -46,7 +46,7 @@ module.exports = async ({ client, Constants: { Colors, Text }, configJS }, { ser
 				embed: {
 					color: Colors.MISSING_PERMS,
 					title: `I'm sorry, but I cannot let you do that! 😶`,
-					description: `You cannot ban someone who's above you! That's dumb!`,
+					description: `You cannot ban someone who's above you hierarchically! That's dumb!`,
 				},
 			});
 		}
@@ -129,6 +129,9 @@ module.exports = async ({ client, Constants: { Colors, Text }, configJS }, { ser
 							embed: {
 								description: `Ban canceled! 😓`,
 								color: Colors.INFO,
+								footer: {
+									text: `Phew!`,
+								},
 							},
 						});
 					}

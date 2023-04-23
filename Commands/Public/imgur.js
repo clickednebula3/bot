@@ -94,7 +94,7 @@ module.exports = async ({ Constants: { Colors, Text } }, { serverDocument }, msg
 			embed: {
 				color: Colors.ERROR,
 				title: Text.ERROR_TITLE(),
-				description: "An unknown error occurred and we were unable to handle it.",
+				description: `An unknown error, Err_${err.statusCode}, occurred and we were unable to handle it.`,
 			},
 		});
 	}

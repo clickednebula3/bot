@@ -17,7 +17,7 @@ module.exports = async ({ Constants: { Colors } }, { memberDocument, memberQuery
 			msg.send({
 				embed: {
 					color: Colors.GREEN,
-					description: `Alright, I will now show that message when you are mentioned in chat. 👌`,
+					description: `Alright, I will now show that message when you're mentioned in chat. 👌`,
 					footer: {
 						text: `Use "${msg.guild.commandPrefix}${commandData.name} ." to remove it`,
 					},
